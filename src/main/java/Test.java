@@ -21,25 +21,26 @@ public class Test {
 //        System.out.println(new String(Base64.getDecoder().decode(Base64.getEncoder().encodeToString(aa))));
 //        System.out.println((char)117);
 //        System.out.println((char)51);
-        String hex = "234afced1234";
-        byte[] tem1 = CommonUtils.convertHexToByte(hex);
-        System.out.println(tem1);
-        for (byte b:tem1) {
-            System.out.println(b);
-        }
-//        try {
-//            MessageDigest md = MessageDigest.getInstance("md5");
-//            tem1 = md.digest(hex.getBytes());
-//            System.out.println(tem1);
-//            for (byte b:tem1) {
-//                System.out.println(b);
-//            }
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
+//        String hex = "234afced1234";
+//        byte[] tem1 = CommonUtils.convertHexToByte(hex);
+//        System.out.println(tem1);
+//        for (byte b:tem1) {
+//            System.out.println(b);
 //        }
-        BigInteger bigInteger  = new BigInteger(1, tem1);
-        System.out.println(bigInteger.toString(16));
-
+////        try {
+////            MessageDigest md = MessageDigest.getInstance("md5");
+////            tem1 = md.digest(hex.getBytes());
+////            System.out.println(tem1);
+////            for (byte b:tem1) {
+////                System.out.println(b);
+////            }
+////        } catch (NoSuchAlgorithmException e) {
+////            e.printStackTrace();
+////        }
+//        BigInteger bigInteger  = new BigInteger(1, tem1);
+//        System.out.println(bigInteger.toString(16));
+        String REQUEST_URL = "http://list.rola-ip.site:8088/user_get_ip_list?token=2sWKsxRdhVUrb0ap1577069465978&qty=1&country=%s&time=10&format=json&protocol=socks5&filter=1";
+        System.out.println(String.format(REQUEST_URL, "cn"));
     }
 
 }
